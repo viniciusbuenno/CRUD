@@ -1,22 +1,4 @@
-'''
-Implementar a opção 2 (procurar contato) da seguinte forma:
-Ficar pedindo para digitar um nome até digitar um nome que existe;
-mostrar então na tela TODOS os demais dados daquela pessoa, cujo
-nome foi digitado.
 
-Implementar a opção 3 (atualizar contato) da seguinte forma:
-Ficar mostrando um menu oferecendo as opções de atualizar aniversário, ou
-endereco, ou telefone, ou celular, ou email, ou finalizar as
-atualizações; ficar pedindo para digitar a opção até digitar uma
-opção válida; realizar a atulização solicitada; até ser escolhida a
-opção de finalizar as atualizações.
-
-Implementar a opção 4 (listar contato) da seguinte forma:
-Mostrar na tela os TODOS os dados de CADA um dos contatos presentes
-na lista chamada agenda (eventualmente chamada de agd).
-
-Entregar até domingo, dia 28 de abril de 2024.
-'''
 def apresenteSe ():
     print('+-------------------------------------------------------------+')
     print('|                                                             |')
@@ -53,14 +35,7 @@ def opcaoEscolhida (mnu):
     print()
     return umTexto('Qual é a sua opção? ', 'Opção inválida', opcoesValidas)
 
-'''
-procura nom em agd e, se achou, retorna:
-uma lista contendo True e a posicao onde achou;
-MAS, se não achou, retorna:
-uma lista contendo False e a posição onde inserir,
-aquilo que foi buscado, mas nao foi encontrado,
-mantendo a ordenação da lista.
-'''
+
 def ondeEsta (nom,agd):
     inicio=0
     final =len(agd)-1
@@ -103,10 +78,7 @@ def incluir (agd):
     print('Cadastro realizado com sucesso!')
 
 def procurar (agd):
-    # Ficar pedindo para digitar um nome até digitar um nome que existe
-    # cadastrado;
-    # mostrar então na tela TODOS os demais dados encontrados 
-    # sobre aquela pessoa.
+  
     parar = False
     while parar == False:
 
@@ -151,12 +123,7 @@ def procurar (agd):
 
 
 def atualizar (agd):
-    # Ficar mostrando um menu oferecendo as opções de atualizar aniversário, ou
-    # endereco, ou telefone, ou celular, ou email, ou finalizar as
-    # atualizações; ficar pedindo para digitar a opção até digitar uma
-    # opção válida; realizar a atulização solicitada; até ser escolhida a
-    # opção de finalizar as atualizações.
-    # USAR A FUNÇÃO opcaoEscolhida, JÁ IMPLEMENTADA, PARA FAZER O MENU
+  
     atualizaOpcoes = ["Aniversário", \
                       "Endereço", \
                       "Telefone", \
@@ -282,10 +249,7 @@ def atualizar (agd):
 
 
 def listar (agd):
-    # implementar aqui a listagem de todos os dados de todos
-    # os contatos cadastrados
-    # printar aviso de que não há contatos cadastrados se
-    # esse for o caso
+
 
     if not agd:
         print("Nenhum contato cadastrado.")
